@@ -11,29 +11,51 @@ struct CoinDetailViewController: View {
     @ObservedObject var viewModel: CoinDetailViewModel
     
     var body: some View {
-        VStack {
-            Text(viewModel.coin.marketCapRank)
-                .font(.system(size: 32, weight: .black))
+        VStack(alignment: .leading) {
             HStack {
                 ImageCacheView(withURL: viewModel.coin.image)
                     .frame(width: 100, height: 100)
                     .padding()
+                    .shadow(radius: 8.0)
                 VStack(alignment: .leading) {
-                    Text(viewModel.coin.name)
+                    Text(viewModel.coin.name + " (\(viewModel.coin.symbol.uppercased()))")
                         .multilineTextAlignment(.leading)
-                        .font(.largeTitle)
+                        .font(.system(size: 24, weight: .medium))
                     Text(String(viewModel.coin.price))
                         .multilineTextAlignment(.leading)
                         .font(.system(size: 32, weight: .black))
-                        
                 }
-                
-                Spacer()
             }
-           
             
+            HStack {
+                VStack(alignment: .leading) {
+                    Text("Low 24h")
+                        .font(.system(size: 24, weight: .black))
+                        .foregroundColor(.red)
+                    Text(viewModel.coin.low24h)
+                        .font(.system(size: 24, weight: .bold))
+                        
+                }.frame(maxWidth: .infinity)
+                
+                VStack(alignment: .leading) {
+                    Text("High 24h")
+                        .font(.system(size: 24, weight: .black))
+                        .foregroundColor(.green)
+                    Text(viewModel.coin.high24h)
+                        .font(.system(size: 24, weight: .bold))
+                        
+                }.frame(maxWidth: .infinity)
+            
+                
+            }
+            .frame(maxWidth: .infinity)
+            .padding()
             Spacer()
         }
+        
+        .navigationTitle(viewModel.coin.marketCapRank)
+        .navigationBarTitleDisplayMode(.inline)
+            
     }
 }
 

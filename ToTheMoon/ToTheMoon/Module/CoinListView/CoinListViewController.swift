@@ -22,7 +22,9 @@ struct CoinListViewController: View {
                         }
                     }
                 }
+                .background(Color.background)
             }
+       
         .navigationTitle("To The Moon!")
     
     }

@@ -18,7 +18,7 @@ public struct CoinItemView: View {
             Text(coin.name)
                 .foregroundColor(.black)
                 .font(.system(size: 16, weight: .bold))
-            Text(coin.id)
+            Text("(\(coin.symbol))")
                 .foregroundColor(.black)
                 .font(.system(size: 14, weight: .light))
             Spacer()

@@ -19,6 +19,7 @@ final class CoinTest: XCTestCase {
             return
         }
         
+    
         guard let data = try? Data(contentsOf: file) else {
             XCTFail("Couldn't load \(filename) from main bundle.")
             return

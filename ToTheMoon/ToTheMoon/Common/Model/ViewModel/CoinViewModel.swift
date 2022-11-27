@@ -16,17 +16,21 @@ struct CoinViewModel: Identifiable {
     let price: String
     let lastUpdated: Date
     let marketCapRank: String
+    let high24h: String
+    let low24h: String
     
     init(coin:Coin) {
         self.id = coin.id
-        self.symbol = coin.symbol
+        self.symbol = coin.symbol.uppercased()
         self.name = coin.name
         self.image = coin.image
         let imgSmall = image.absoluteString.replacingOccurrences(of: "/large/", with: "/small/")
         self.imageSmall = URL(string: imgSmall)!
         self.lastUpdated = coin.lastUpdated
         self.marketCapRank = "Rank #\(coin.marketCapRank)"
-        self.price = "$\(coin.currentPrice)"
+        self.price = coin.currentPrice.usdCurrency
+        self.high24h = coin.high24h.usdCurrency
+        self.low24h = coin.low24h.usdCurrency
     }
 }
 
