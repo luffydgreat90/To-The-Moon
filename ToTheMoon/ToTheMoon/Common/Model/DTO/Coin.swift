@@ -7,11 +7,14 @@
 
 import Foundation
 
-struct Coin: Identifiable, Decodable {
+struct Coin: Decodable {
     let id: String
     let symbol: String
     let name: String
     let image: URL
     let currentPrice: Double
     let lastUpdated: Date
+    let marketCapRank: Int
+//    let priceChange24th: Double
+//    let priceChangePercentage24h: Double
 }

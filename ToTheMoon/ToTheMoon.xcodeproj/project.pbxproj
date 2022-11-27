@@ -33,6 +33,8 @@
 		8E66B7AF2932AB6D00A6616F /* CoinDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E66B7AE2932AB6D00A6616F /* CoinDetailViewController.swift */; };
 		8E66B7B12932AB8200A6616F /* CoinDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E66B7B02932AB8200A6616F /* CoinDetailViewModel.swift */; };
 		8E66B7B32932AE0D00A6616F /* CoinDetailFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E66B7B22932AE0D00A6616F /* CoinDetailFactory.swift */; };
+		8E66B7B72932B1A400A6616F /* MockCoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E66B7B62932B1A400A6616F /* MockCoin.swift */; };
+		8E66B7BA293377CB00A6616F /* ImageCacheView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E66B7B9293377CA00A6616F /* ImageCacheView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,8 @@
 		8E66B7AE2932AB6D00A6616F /* CoinDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailViewController.swift; sourceTree = "<group>"; };
 		8E66B7B02932AB8200A6616F /* CoinDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailViewModel.swift; sourceTree = "<group>"; };
 		8E66B7B22932AE0D00A6616F /* CoinDetailFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailFactory.swift; sourceTree = "<group>"; };
+		8E66B7B62932B1A400A6616F /* MockCoin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoin.swift; sourceTree = "<group>"; };
+		8E66B7B9293377CA00A6616F /* ImageCacheView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +181,7 @@
 		8E66B781293214DF00A6616F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8E66B7B8293377A700A6616F /* ImageView */,
 				8E66B78D29321C6400A6616F /* Item */,
 			);
 			path = View;
@@ -203,6 +208,7 @@
 		8E66B78A293219E900A6616F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8E66B7B52932B18F00A6616F /* Mock */,
 				8E66B78C293219F900A6616F /* DTO */,
 				8E66B78B293219F300A6616F /* ViewModel */,
 			);
@@ -302,6 +308,22 @@
 				8E66B7B02932AB8200A6616F /* CoinDetailViewModel.swift */,
 			);
 			path = CoinDetail;
+			sourceTree = "<group>";
+		};
+		8E66B7B52932B18F00A6616F /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				8E66B7B62932B1A400A6616F /* MockCoin.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		8E66B7B8293377A700A6616F /* ImageView */ = {
+			isa = PBXGroup;
+			children = (
+				8E66B7B9293377CA00A6616F /* ImageCacheView.swift */,
+			);
+			path = ImageView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -441,6 +463,7 @@
 				8E66B71A2931744B00A6616F /* ContentView.swift in Sources */,
 				8E66B7AC2932A5CF00A6616F /* JSONDecoder+Extension.swift in Sources */,
 				8E66B7AF2932AB6D00A6616F /* CoinDetailViewController.swift in Sources */,
+				8E66B7BA293377CB00A6616F /* ImageCacheView.swift in Sources */,
 				8E66B7852932168200A6616F /* CoinListViewController.swift in Sources */,
 				8E66B7AA293238DF00A6616F /* MockCoinService.swift in Sources */,
 				8E66B7A8293238C800A6616F /* CoinServiceImplementation.swift in Sources */,
@@ -448,6 +471,7 @@
 				8E66B78F2932246A00A6616F /* CoinViewModel.swift in Sources */,
 				8E66B7B32932AE0D00A6616F /* CoinDetailFactory.swift in Sources */,
 				8E66B7872932169300A6616F /* CoinListViewModel.swift in Sources */,
+				8E66B7B72932B1A400A6616F /* MockCoin.swift in Sources */,
 				8E66B7A2293236A100A6616F /* CoinListFactory.swift in Sources */,
 				8E66B789293219D700A6616F /* CoinItemView.swift in Sources */,
 				8E66B7182931744B00A6616F /* ToTheMoonApp.swift in Sources */,
@@ -620,6 +644,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -648,6 +673,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

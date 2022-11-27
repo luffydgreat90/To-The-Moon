@@ -10,11 +10,10 @@ import SwiftUI
 @main
 struct ToTheMoonApp: App {
     let persistenceController = PersistenceController.shared
-
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                CoinListFactory.createCoinListMockViewController()
+                CoinListFactory.createCoinListViewController()
                     .environment(\.managedObjectContext, persistenceController.container.viewContext)
             }
         }

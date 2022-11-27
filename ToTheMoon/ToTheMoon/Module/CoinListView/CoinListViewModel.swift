@@ -12,7 +12,9 @@ import Combine
 final class CoinListViewModel: ObservableObject {
     private let coinService:CoinService
     private var cancellables: Set<AnyCancellable> =  Set<AnyCancellable>()
-    @Published var coins = [Coin]()
+    
+    @Published var coins = [CoinViewModel]()
+    @Published var search: String = ""
     
     init(coinService: CoinService!) {
         self.coinService = coinService

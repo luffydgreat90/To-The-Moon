@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 class MockCoinService: CoinService {
-    func fetchCoins() -> AnyPublisher<[Coin], Error> {
+    func fetchCoins() -> AnyPublisher<[CoinViewModel], Error> {
         
         return Future { promise in
             
@@ -33,7 +33,9 @@ class MockCoinService: CoinService {
                 return
             }
             
-            promise(.success(coins))
+            
+            
+            promise(.success(coins.map { CoinViewModel(coin: $0) } ))
         }.eraseToAnyPublisher()
          
     }

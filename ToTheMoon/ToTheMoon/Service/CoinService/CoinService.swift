@@ -9,5 +9,5 @@ import Foundation
 import Combine
 
 protocol CoinService {
-    func fetchCoins() -> AnyPublisher<[Coin], Error>
+    func fetchCoins() -> AnyPublisher<[CoinViewModel], Error>
 }

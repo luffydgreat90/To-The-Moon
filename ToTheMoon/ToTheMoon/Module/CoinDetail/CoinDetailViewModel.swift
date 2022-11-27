@@ -7,6 +7,11 @@
 
 import Foundation
 
-class CoinDetailViewModel: ObservableObject {
+@MainActor
+final class CoinDetailViewModel: ObservableObject {
+    let coin:CoinViewModel
     
+    init(coin: CoinViewModel) {
+        self.coin = coin
+    }
 }
