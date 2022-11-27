@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension JSONDecoder {
+public extension JSONDecoder {
     static var customDecoder: JSONDecoder = {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .formatted(.iso8601)

@@ -18,6 +18,7 @@ struct Coin: Decodable {
     let priceChange24h: Double
     let high24h: Double
     let low24h: Double
+    let priceChangePercentage24h: Double
     
     private enum CodingKeys: String, CodingKey {
         case id, symbol, name, image
@@ -27,5 +28,6 @@ struct Coin: Decodable {
         case priceChange24h = "price_change_24h"
         case high24h = "high_24h"
         case low24h = "low_24h"
+        case priceChangePercentage24h = "price_change_percentage_24h"
     }
 }

@@ -18,7 +18,7 @@ struct CoinViewModel: Identifiable {
     let marketCapRank: String
     let high24h: String
     let low24h: String
-    
+    let priceChangePercentage24h: String
     init(coin:Coin) {
         self.id = coin.id
         self.symbol = coin.symbol.uppercased()
@@ -31,6 +31,7 @@ struct CoinViewModel: Identifiable {
         self.price = coin.currentPrice.usdCurrency
         self.high24h = coin.high24h.usdCurrency
         self.low24h = coin.low24h.usdCurrency
+        self.priceChangePercentage24h = coin.priceChangePercentage24h.percentage
     }
 }
 

@@ -8,8 +8,8 @@
 import Foundation
 import Combine
 
-class MockCoinService: CoinService {
-    func fetchCoins() -> AnyPublisher<[CoinViewModel], Error> {
+public class MockCoinService: CoinService {
+    func fetchCoins() -> CoinsLoader {
         
         return Future { promise in
             
@@ -24,18 +24,13 @@ class MockCoinService: CoinService {
                 return
             }
 
-            let decoder = JSONDecoder()
-            decoder.keyDecodingStrategy = .convertFromSnakeCase
-            decoder.dateDecodingStrategy = .formatted(.iso8601)
-
-            guard let coins: [Coin] = try? decoder.decode([Coin].self, from: data) else {
+            guard let coins: [Coin] = try? JSONDecoder.customDecoder.decode([Coin].self, from: data) else {
                 promise(.failure( URLError.badURL as! Error))
                 return
             }
             
-            
-            
             promise(.success(coins.map { CoinViewModel(coin: $0) } ))
+            
         }.eraseToAnyPublisher()
          
     }

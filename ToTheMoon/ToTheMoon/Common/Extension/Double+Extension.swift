@@ -7,14 +7,18 @@
 
 import Foundation
 
-extension Double {
+public extension Double {
     
     var usdCurrency: String {
         let currencyFormatter = NumberFormatter()
         currencyFormatter.usesGroupingSeparator = true
         currencyFormatter.numberStyle = .currency
         currencyFormatter.locale = Locale(identifier: "en_US")
-        
         return currencyFormatter.string(for: self) ?? ""
+    }
+    
+    var percentage: String {
+        let percent = String(format: "%.2f", self)
+        return percent + "%"
     }
 }
