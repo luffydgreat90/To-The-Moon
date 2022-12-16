@@ -15,11 +15,11 @@ class HttpURLSessionService : HttpService {
         return URLSession.shared.dataTaskPublisher(for: url)
             .retry(3)
             .tryMap { (data, response) in
-                guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else{
+                guard let httpResponse = response as? HTTPURLResponse else{
                     throw URLError(.badServerResponse)
                 }
             
-                return (data, httpResponse.statusCode)
+                return (data, httpResponse)
             }.eraseToAnyPublisher()
     }
 }

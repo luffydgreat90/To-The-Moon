@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-public typealias HTTPResult = AnyPublisher<(Data, Int), Error>
+public typealias HTTPResult = AnyPublisher<(Data, HTTPURLResponse), Error>
 
 public protocol HttpService {
     func getAPI(withAppendURL url:String) -> HTTPResult
