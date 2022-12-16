@@ -11,7 +11,7 @@ struct CoinDetailViewController: View {
     @ObservedObject var viewModel: CoinDetailViewModel
     
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack {
             HStack {
                 ImageCacheView(withURL: viewModel.coin.image)
                     .frame(width: 100, height: 100)
@@ -20,10 +20,14 @@ struct CoinDetailViewController: View {
                 VStack(alignment: .leading) {
                     Text(viewModel.coin.name + " (\(viewModel.coin.symbol.uppercased()))")
                         .multilineTextAlignment(.leading)
-                        .font(.system(size: 24, weight: .medium))
+                        .font(.system(size: 17, weight: .medium))
                     Text(String(viewModel.coin.price))
                         .multilineTextAlignment(.leading)
                         .font(.system(size: 32, weight: .black))
+                    Text(String(viewModel.coin.priceChangePercentage24h))
+                        .multilineTextAlignment(.leading)
+                        .foregroundColor(viewModel.coin.statusColor)
+                        .font(.system(size: 17, weight: .bold))
                 }
             }
             
@@ -31,7 +35,7 @@ struct CoinDetailViewController: View {
                 VStack(alignment: .leading) {
                     Text("Low 24h")
                         .font(.system(size: 24, weight: .black))
-                        .foregroundColor(.red)
+                        .foregroundColor(.negative)
                     Text(viewModel.coin.low24h)
                         .font(.system(size: 24, weight: .bold))
                         
@@ -40,7 +44,7 @@ struct CoinDetailViewController: View {
                 VStack(alignment: .leading) {
                     Text("High 24h")
                         .font(.system(size: 24, weight: .black))
-                        .foregroundColor(.green)
+                        .foregroundColor(.positive)
                     Text(viewModel.coin.high24h)
                         .font(.system(size: 24, weight: .bold))
                         
@@ -52,7 +56,7 @@ struct CoinDetailViewController: View {
             .padding()
             Spacer()
         }
-        
+        .background(Color.background)
         .navigationTitle(viewModel.coin.marketCapRank)
         .navigationBarTitleDisplayMode(.inline)
             

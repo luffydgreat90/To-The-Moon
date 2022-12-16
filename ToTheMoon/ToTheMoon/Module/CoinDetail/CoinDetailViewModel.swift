@@ -5,13 +5,14 @@
 //  Created by Marlon Ansale on 11/26/22.
 //
 
-import Foundation
+import SwiftUI
 
 @MainActor
-final class CoinDetailViewModel: ObservableObject {
+public final class CoinDetailViewModel: ObservableObject {
     let coin:CoinViewModel
     
     init(coin: CoinViewModel) {
         self.coin = coin
     }
+
 }

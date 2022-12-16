@@ -33,7 +33,7 @@ public struct CoinItemView: View {
                     .font(.system(size: 16, weight: .medium))
                     .padding(.trailing)
                 Text(coin.priceChangePercentage24h)
-                    .foregroundColor(.black)
+                    .foregroundColor(coin.statusColor)
                     .font(.system(size: 16, weight: .medium))
                     .padding(.trailing)
             }
