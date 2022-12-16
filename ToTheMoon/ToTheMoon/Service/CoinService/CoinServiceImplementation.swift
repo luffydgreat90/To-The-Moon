@@ -9,22 +9,16 @@ import Foundation
 import Combine
 
 public class CoinServiceImplementation: CoinService {
-    func fetchCoins() -> CoinsLoader {
-        let url = URL(string: "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50")!
+    private let httpService: HttpService
+    
+    public init(httpService: HttpService) {
+        self.httpService = httpService
+    }
+    
+    public func fetchCoins() -> CoinsLoader {
         
-        return URLSession.shared.dataTaskPublisher(for: url)
-            .retry(3)
-            .tryMap { (data, response) in
-            guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else{
-                throw URLError(.badServerResponse)
-            }
-            
-            return data
-        }.decode(type: [Coin].self, decoder: JSONDecoder.customDecoder)
-        .tryMap { coins in
-            coins.map{ CoinViewModel(coin: $0) }
-        }
-        .eraseToAnyPublisher()
-        
+        self.httpService.getAPI(withAppendURL: "coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50")
+            .tryMap (CoinMapper.map)
+            .eraseToAnyPublisher()
     }
 }

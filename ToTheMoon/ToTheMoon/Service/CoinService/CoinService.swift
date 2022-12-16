@@ -8,8 +8,8 @@
 import Foundation
 import Combine
 
-typealias CoinsLoader = AnyPublisher<[CoinViewModel], Error>
+public typealias CoinsLoader = AnyPublisher<[CoinViewModel], Error>
 
-protocol CoinService {
+public protocol CoinService {
     func fetchCoins() -> CoinsLoader
 }
