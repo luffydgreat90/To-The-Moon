@@ -11,4 +11,12 @@ public extension Color {
     static let background: Color = {
         Color("background")
     }()
+    
+    static let negative: Color = {
+        Color("negativeColor")
+    }()
+    
+    static let positive: Color = {
+        Color("positiveColor")
+    }()
 }
