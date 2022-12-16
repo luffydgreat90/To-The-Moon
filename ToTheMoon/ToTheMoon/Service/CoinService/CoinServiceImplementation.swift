@@ -16,10 +16,8 @@ public class CoinServiceImplementation: CoinService {
     }
     
     public func fetchCoins() -> CoinsLoader {
-        
         self.httpService.getAPI(withAppendURL: "coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50")
         .tryMap(CoinMapper.map)
         .eraseToAnyPublisher()
-    
     }
 }

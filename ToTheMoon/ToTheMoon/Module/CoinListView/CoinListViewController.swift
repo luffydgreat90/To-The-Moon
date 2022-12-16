@@ -9,7 +9,7 @@ import SwiftUI
 import Combine
 
 struct CoinListViewController: View {
-    @ObservedObject var viewModel: CoinListViewModel
+    @ObservedObject private(set) var viewModel: CoinListViewModel
     var body: some View {
             ScrollView {
                 LazyVStack {
@@ -24,7 +24,6 @@ struct CoinListViewController: View {
                 .background(Color.background)
             }
         .navigationTitle("To The Moon!")
-    
     }
 }
 
