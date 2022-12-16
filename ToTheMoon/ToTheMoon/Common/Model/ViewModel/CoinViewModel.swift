@@ -7,26 +7,34 @@
 
 import SwiftUI
 
-struct CoinViewModel: Identifiable {
-    let id: String
-    let symbol: String
-    let name: String
-    let image: URL
-    let imageSmall: URL
-    let price: String
-    let lastUpdated: Date
-    let marketCapRank: String
+public struct CoinViewModel: Identifiable {
+    public let id: String
+    public let symbol: String
+    public let name: String
+    public let image: URL
+    public let imageSmall: URL
+    public let price: String
+    public let lastUpdated: Date
+    public let marketCapRank: String
+    public let high24h: String
+    public let low24h: String
+    public let priceChangePercentage24h: String
+    public let statusColor: Color
     
-    init(coin:Coin) {
-        self.id = coin.id
-        self.symbol = coin.symbol
-        self.name = coin.name
-        self.image = coin.image
-        let imgSmall = image.absoluteString.replacingOccurrences(of: "/large/", with: "/small/")
-        self.imageSmall = URL(string: imgSmall)!
-        self.lastUpdated = coin.lastUpdated
-        self.marketCapRank = "Rank #\(coin.marketCapRank)"
-        self.price = "$\(coin.currentPrice)"
+    init(id: String, symbol: String, name: String, image: URL, imageSmall: URL, price: String, lastUpdated: Date, marketCapRank: String, high24h: String, low24h: String, priceChangePercentage24h: String, statusColor: Color) {
+        self.id = id
+        self.symbol = symbol
+        self.name = name
+        self.image = image
+        self.imageSmall = imageSmall
+        self.price = price
+        self.lastUpdated = lastUpdated
+        self.marketCapRank = marketCapRank
+        self.high24h = high24h
+        self.low24h = low24h
+        self.priceChangePercentage24h = priceChangePercentage24h
+        self.statusColor = statusColor
     }
+    
 }
 

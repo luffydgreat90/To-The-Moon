@@ -9,7 +9,8 @@ import SwiftUI
 
 struct CoinListFactory {
     @MainActor static func createCoinListViewController() -> CoinListViewController {
-        let coinService = CoinServiceImplementation()
+        // Dependency Injection
+        let coinService = CoinServiceImplementation(httpService: HttpURLSessionService())
         let coinListViewModel: CoinListViewModel = CoinListViewModel(coinService: coinService)
         return CoinListViewController(viewModel: coinListViewModel)
     }

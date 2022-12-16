@@ -21,8 +21,6 @@ final class CoinListViewModel: ObservableObject {
         self.fetchCoins()
     }
     
-    
-    
     func fetchCoins(){
         self.coinService.fetchCoins()
             .receive(on: DispatchQueue.main)
@@ -37,7 +35,6 @@ final class CoinListViewModel: ObservableObject {
             
             }, receiveValue: { [weak self] result in
                 self?.coins = result
-            
             }).store(in: &cancellables)
     }
 }
