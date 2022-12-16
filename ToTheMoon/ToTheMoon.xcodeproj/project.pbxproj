@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E34B289294CCD630090922F /* HttpURLSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E34B288294CCD630090922F /* HttpURLSessionService.swift */; };
 		8E66B7182931744B00A6616F /* ToTheMoonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E66B7172931744B00A6616F /* ToTheMoonApp.swift */; };
 		8E66B71A2931744B00A6616F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E66B7192931744B00A6616F /* ContentView.swift */; };
 		8E66B71C2931744D00A6616F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E66B71B2931744D00A6616F /* Assets.xcassets */; };
@@ -38,6 +39,8 @@
 		8E66B7BC2933D48000A6616F /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E66B7BB2933D48000A6616F /* Double+Extension.swift */; };
 		8E66B7BE2933D9CC00A6616F /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E66B7BD2933D9CC00A6616F /* UINavigationController+Extension.swift */; };
 		8E66B7C1293410AF00A6616F /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E66B7C0293410AF00A6616F /* Color+Extension.swift */; };
+		8E66B7CF293568B400A6616F /* CoinMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E66B7CE293568B400A6616F /* CoinMapper.swift */; };
+		8E66B7D12935691600A6616F /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E66B7D02935691600A6616F /* HttpService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +61,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E34B288294CCD630090922F /* HttpURLSessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpURLSessionService.swift; sourceTree = "<group>"; };
 		8E66B7142931744B00A6616F /* ToTheMoon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToTheMoon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E66B7172931744B00A6616F /* ToTheMoonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToTheMoonApp.swift; sourceTree = "<group>"; };
 		8E66B7192931744B00A6616F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -92,6 +96,8 @@
 		8E66B7BB2933D48000A6616F /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		8E66B7BD2933D9CC00A6616F /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
 		8E66B7C0293410AF00A6616F /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		8E66B7CE293568B400A6616F /* CoinMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinMapper.swift; sourceTree = "<group>"; };
+		8E66B7D02935691600A6616F /* HttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E34B287294CCD420090922F /* HTTPService */ = {
+			isa = PBXGroup;
+			children = (
+				8E66B7D02935691600A6616F /* HttpService.swift */,
+				8E34B288294CCD630090922F /* HttpURLSessionService.swift */,
+			);
+			path = HTTPService;
+			sourceTree = "<group>";
+		};
 		8E66B70B2931744B00A6616F = {
 			isa = PBXGroup;
 			children = (
@@ -296,6 +311,7 @@
 		8E66B7A02932359F00A6616F /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				8E34B287294CCD420090922F /* HTTPService */,
 				8E66B7A3293237B400A6616F /* CoinService */,
 			);
 			path = Service;
@@ -304,6 +320,7 @@
 		8E66B7A3293237B400A6616F /* CoinService */ = {
 			isa = PBXGroup;
 			children = (
+				8E66B7CD293568A200A6616F /* CoinMapper */,
 				8E66B7A5293237C700A6616F /* CoinService.swift */,
 				8E66B7A7293238C800A6616F /* CoinServiceImplementation.swift */,
 				8E66B7A9293238DF00A6616F /* MockCoinService.swift */,
@@ -341,6 +358,14 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		8E66B7CD293568A200A6616F /* CoinMapper */ = {
+			isa = PBXGroup;
+			children = (
+				8E66B7CE293568B400A6616F /* CoinMapper.swift */,
+			);
+			path = CoinMapper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -475,7 +500,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E34B289294CCD630090922F /* HttpURLSessionService.swift in Sources */,
 				8E66B791293225C400A6616F /* Coin.swift in Sources */,
+				8E66B7D12935691600A6616F /* HttpService.swift in Sources */,
 				8E66B7212931744D00A6616F /* Persistence.swift in Sources */,
 				8E66B7BC2933D48000A6616F /* Double+Extension.swift in Sources */,
 				8E66B71A2931744B00A6616F /* ContentView.swift in Sources */,
@@ -492,6 +519,7 @@
 				8E66B7872932169300A6616F /* CoinListViewModel.swift in Sources */,
 				8E66B7B72932B1A400A6616F /* MockCoin.swift in Sources */,
 				8E66B7A2293236A100A6616F /* CoinListFactory.swift in Sources */,
+				8E66B7CF293568B400A6616F /* CoinMapper.swift in Sources */,
 				8E66B789293219D700A6616F /* CoinItemView.swift in Sources */,
 				8E66B7182931744B00A6616F /* ToTheMoonApp.swift in Sources */,
 				8E66B7A6293237C700A6616F /* CoinService.swift in Sources */,
