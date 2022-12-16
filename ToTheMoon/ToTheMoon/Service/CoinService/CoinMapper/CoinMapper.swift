@@ -38,9 +38,8 @@ public enum CoinMapper {
     }
     
     public static func map(_ data: Data, response: HTTPURLResponse) throws -> [CoinViewModel] {
-        let jsonDecoder = JSONDecoder()
-        jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
-        
+        let jsonDecoder:JSONDecoder = .customDecoder
+    
         guard let coins:[Coin] = try? jsonDecoder.decode([Coin].self, from: data), response.statusCode == 200 else{
             throw Error.invalidData
         }
