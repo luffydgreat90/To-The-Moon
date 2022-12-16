@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8E34B289294CCD630090922F /* HttpURLSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E34B288294CCD630090922F /* HttpURLSessionService.swift */; };
+		8E34B28C294CDEA00090922F /* CoinMapperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E34B28B294CDEA00090922F /* CoinMapperTest.swift */; };
+		8E34B28F294CDFC40090922F /* XCTestCase+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E34B28E294CDFC40090922F /* XCTestCase+URL.swift */; };
 		8E66B7182931744B00A6616F /* ToTheMoonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E66B7172931744B00A6616F /* ToTheMoonApp.swift */; };
 		8E66B71A2931744B00A6616F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E66B7192931744B00A6616F /* ContentView.swift */; };
 		8E66B71C2931744D00A6616F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E66B71B2931744D00A6616F /* Assets.xcassets */; };
@@ -21,7 +23,6 @@
 		8E66B7872932169300A6616F /* CoinListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E66B7862932169300A6616F /* CoinListViewModel.swift */; };
 		8E66B789293219D700A6616F /* CoinItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E66B788293219D700A6616F /* CoinItemView.swift */; };
 		8E66B78F2932246A00A6616F /* CoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E66B78E2932246A00A6616F /* CoinViewModel.swift */; };
-		8E66B7962932266400A6616F /* CoinTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E66B7952932266400A6616F /* CoinTest.swift */; };
 		8E66B79A29322C8D00A6616F /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E66B79929322C8D00A6616F /* DateFormatter+Extension.swift */; };
 		8E66B79C2932311F00A6616F /* coin_return.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E66B79B2932311F00A6616F /* coin_return.json */; };
 		8E66B79E2932317500A6616F /* coin_return.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E66B79B2932311F00A6616F /* coin_return.json */; };
@@ -61,6 +62,8 @@
 
 /* Begin PBXFileReference section */
 		8E34B288294CCD630090922F /* HttpURLSessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpURLSessionService.swift; sourceTree = "<group>"; };
+		8E34B28B294CDEA00090922F /* CoinMapperTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinMapperTest.swift; sourceTree = "<group>"; };
+		8E34B28E294CDFC40090922F /* XCTestCase+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+URL.swift"; sourceTree = "<group>"; };
 		8E66B7142931744B00A6616F /* ToTheMoon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToTheMoon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E66B7172931744B00A6616F /* ToTheMoonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToTheMoonApp.swift; sourceTree = "<group>"; };
 		8E66B7192931744B00A6616F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -78,7 +81,6 @@
 		8E66B7862932169300A6616F /* CoinListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinListViewModel.swift; sourceTree = "<group>"; };
 		8E66B788293219D700A6616F /* CoinItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinItemView.swift; sourceTree = "<group>"; };
 		8E66B78E2932246A00A6616F /* CoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinViewModel.swift; sourceTree = "<group>"; };
-		8E66B7952932266400A6616F /* CoinTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinTest.swift; sourceTree = "<group>"; };
 		8E66B79929322C8D00A6616F /* DateFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extension.swift"; sourceTree = "<group>"; };
 		8E66B79B2932311F00A6616F /* coin_return.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = coin_return.json; sourceTree = "<group>"; };
 		8E66B7A1293236A100A6616F /* CoinListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinListFactory.swift; sourceTree = "<group>"; };
@@ -132,6 +134,22 @@
 			path = HTTPService;
 			sourceTree = "<group>";
 		};
+		8E34B28A294CDE8A0090922F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				8E34B28B294CDEA00090922F /* CoinMapperTest.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		8E34B28D294CDF870090922F /* TestHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				8E34B28E294CDFC40090922F /* XCTestCase+URL.swift */,
+			);
+			path = TestHelpers;
+			sourceTree = "<group>";
+		};
 		8E66B70B2931744B00A6616F = {
 			isa = PBXGroup;
 			children = (
@@ -181,8 +199,8 @@
 		8E66B72D2931744D00A6616F /* ToTheMoonTests */ = {
 			isa = PBXGroup;
 			children = (
-				8E66B7BF2933E7A800A6616F /* View */,
-				8E66B7942932264900A6616F /* Model */,
+				8E34B28D294CDF870090922F /* TestHelpers */,
+				8E34B28A294CDE8A0090922F /* Service */,
 				8E66B792293225DD00A6616F /* JSON */,
 				8E66B72E2931744D00A6616F /* ToTheMoonTests.swift */,
 			);
@@ -256,14 +274,6 @@
 				8E66B79B2932311F00A6616F /* coin_return.json */,
 			);
 			path = JSON;
-			sourceTree = "<group>";
-		};
-		8E66B7942932264900A6616F /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				8E66B7952932266400A6616F /* CoinTest.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		8E66B79729322C7C00A6616F /* Common */ = {
@@ -340,13 +350,6 @@
 				8E66B7B9293377CA00A6616F /* ImageCacheView.swift */,
 			);
 			path = ImageView;
-			sourceTree = "<group>";
-		};
-		8E66B7BF2933E7A800A6616F /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		8E66B7CD293568A200A6616F /* CoinMapper */ = {
@@ -521,8 +524,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E66B7962932266400A6616F /* CoinTest.swift in Sources */,
 				8E66B72F2931744D00A6616F /* ToTheMoonTests.swift in Sources */,
+				8E34B28F294CDFC40090922F /* XCTestCase+URL.swift in Sources */,
+				8E34B28C294CDEA00090922F /* CoinMapperTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
