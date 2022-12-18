@@ -50,6 +50,17 @@
                ReferencedContainer = "container:ToTheMoon.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8E5292FB294F63FE00F4B53C"
+               BuildableName = "CoinFeedTests.xctest"
+               BlueprintName = "CoinFeedTests"
+               ReferencedContainer = "container:ToTheMoon.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
