@@ -51,4 +51,9 @@ class CoinMapperTest: XCTestCase {
         XCTAssertEqual(coinFirst?.name, "Bitcoin")
         XCTAssertEqual(coinFirst?.marketCapRank,"Rank #1")
     }
+    
+    func test_mapper_empty_data_with_code_200() throws {
+        let emptyData = makeData()
+        XCTAssertThrowsError(try CoinMapper.map(emptyData, response: HTTPURLResponse(code: 200)))
+    }
 }
