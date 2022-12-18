@@ -28,7 +28,7 @@ class CoinMapperTest: XCTestCase {
             throw ErrorDecode.decode
         }
         
-        let httpResponse = HTTPURLResponse(url: makeURL(), statusCode: 200, httpVersion: nil, headerFields: nil)!
+        let httpResponse = HTTPURLResponse(code: 200)
         
         return (data, httpResponse)
     }
@@ -55,5 +55,20 @@ class CoinMapperTest: XCTestCase {
     func test_mapper_empty_data_with_code_200() throws {
         let emptyData = makeData()
         XCTAssertThrowsError(try CoinMapper.map(emptyData, response: HTTPURLResponse(code: 200)))
+    }
+    
+    func test_mapper_non_empty_data_with_code_200() throws {
+        let emptyData = makeData("non-empty data")
+        XCTAssertThrowsError(try CoinMapper.map(emptyData, response: HTTPURLResponse(code: 200)))
+    }
+    
+    func test_mapper_invalid_status_code() throws {
+        let (data, _ ) = try makeDataAndResponse()
+        let statusCodes = [100,199,201,300,404,500]
+        
+        try statusCodes.forEach { code in
+            XCTAssertThrowsError(try CoinMapper.map(data, response: HTTPURLResponse(code: code)))
+        }
+        
     }
 }
