@@ -25,6 +25,8 @@
 		8E529307294F6FA400F4B53C /* XCTestCase+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E34B28E294CDFC40090922F /* XCTestCase+URL.swift */; };
 		8E529308294F6FB400F4B53C /* coin_return.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E66B79B2932311F00A6616F /* coin_return.json */; };
 		8E529309294F6FB900F4B53C /* coin_return.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E66B79B2932311F00A6616F /* coin_return.json */; };
+		8E52930B294F9A3000F4B53C /* HTTPURLResponse+StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E52930A294F9A3000F4B53C /* HTTPURLResponse+StatusCode.swift */; };
+		8E52930D294F9BF000F4B53C /* XCTestCase+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E52930C294F9BF000F4B53C /* XCTestCase+Data.swift */; };
 		8E66B7182931744B00A6616F /* ToTheMoonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E66B7172931744B00A6616F /* ToTheMoonApp.swift */; };
 		8E66B71A2931744B00A6616F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E66B7192931744B00A6616F /* ContentView.swift */; };
 		8E66B71C2931744D00A6616F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E66B71B2931744D00A6616F /* Assets.xcassets */; };
@@ -87,6 +89,8 @@
 		8E34B28E294CDFC40090922F /* XCTestCase+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+URL.swift"; sourceTree = "<group>"; };
 		8E5292D6294F613900F4B53C /* CoinFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoinFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E5292FC294F63FE00F4B53C /* CoinFeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoinFeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E52930A294F9A3000F4B53C /* HTTPURLResponse+StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+StatusCode.swift"; sourceTree = "<group>"; };
+		8E52930C294F9BF000F4B53C /* XCTestCase+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Data.swift"; sourceTree = "<group>"; };
 		8E66B7142931744B00A6616F /* ToTheMoon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToTheMoon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E66B7172931744B00A6616F /* ToTheMoonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToTheMoonApp.swift; sourceTree = "<group>"; };
 		8E66B7192931744B00A6616F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -166,6 +170,8 @@
 			isa = PBXGroup;
 			children = (
 				8E34B28E294CDFC40090922F /* XCTestCase+URL.swift */,
+				8E52930C294F9BF000F4B53C /* XCTestCase+Data.swift */,
+				8E52930A294F9A3000F4B53C /* HTTPURLResponse+StatusCode.swift */,
 			);
 			path = TestHelpers;
 			sourceTree = "<group>";
@@ -603,7 +609,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E52930D294F9BF000F4B53C /* XCTestCase+Data.swift in Sources */,
 				8E529307294F6FA400F4B53C /* XCTestCase+URL.swift in Sources */,
+				8E52930B294F9A3000F4B53C /* HTTPURLResponse+StatusCode.swift in Sources */,
 				8E529306294F6F8F00F4B53C /* CoinMapperTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
