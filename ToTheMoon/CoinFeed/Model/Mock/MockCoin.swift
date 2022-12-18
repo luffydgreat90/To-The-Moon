@@ -8,7 +8,7 @@
 import Foundation
 
 
-var mockCoinViewModel: CoinViewModel = {
+public var mockCoinViewModel: CoinViewModel = {
     CoinViewModel(id: "BTC",
                   symbol: "BTC",
                   name: "Bitcoin",

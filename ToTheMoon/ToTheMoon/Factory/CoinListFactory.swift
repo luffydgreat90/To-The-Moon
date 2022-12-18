@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoinFeed
 
 struct CoinListFactory {
     @MainActor static func createCoinListViewController() -> CoinListViewController {

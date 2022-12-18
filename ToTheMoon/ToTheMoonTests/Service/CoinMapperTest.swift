@@ -7,6 +7,7 @@
 
 import Foundation
 import ToTheMoon
+import CoinFeed
 import XCTest
 
 enum ErrorDecode: Error {

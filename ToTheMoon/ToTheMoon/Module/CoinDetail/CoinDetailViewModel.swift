@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoinFeed
 
 @MainActor
 public final class CoinDetailViewModel: ObservableObject {

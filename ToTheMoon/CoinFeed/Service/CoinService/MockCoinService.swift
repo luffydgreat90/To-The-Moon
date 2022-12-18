@@ -10,10 +10,12 @@ import Combine
 
 public class MockCoinService: CoinService {
     public func fetchCoins() -> CoinsLoader {
-        
-        return Future { promise in
-            promise(.success([mockCoinViewModel]))
+        return Deferred {
+            Future { promise in
+                promise(.success([mockCoinViewModel]))
+            }
         }.eraseToAnyPublisher()
-         
     }
+    
+    public init() {}
 }

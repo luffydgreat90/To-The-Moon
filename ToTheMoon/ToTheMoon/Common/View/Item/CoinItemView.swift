@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoinFeed
 
 public struct CoinItemView: View {
     @State var coin:CoinViewModel

@@ -6,7 +6,6 @@
 //
 
 import Foundation
-
 fileprivate struct Coin: Decodable {
     let id: String
     let symbol: String

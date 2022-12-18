@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import CoinFeed
 
 @MainActor
 final class CoinListViewModel: ObservableObject {
